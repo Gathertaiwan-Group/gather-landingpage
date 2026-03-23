@@ -98,3 +98,71 @@ body {
 .intro-glow {
   animation: soft-glow 2.6s ease-in-out infinite;
 }
+
+.reveal-base {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateY(-40px) translateX(20px) scale(1.08);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.25;
+  }
+}
+
+.particle {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(16px);
+  animation: particle-float 8s ease-in-out infinite;
+}
+
+.p1 {
+  width: 160px;
+  height: 160px;
+  top: 12%;
+  left: 8%;
+  background: #5ee9ff55;
+}
+
+.p2 {
+  width: 220px;
+  height: 220px;
+  top: 18%;
+  right: 10%;
+  background: #8b7bff44;
+  animation-delay: 1s;
+}
+
+.p3 {
+  width: 140px;
+  height: 140px;
+  bottom: 15%;
+  left: 16%;
+  background: #49d6ff33;
+  animation-delay: 1.8s;
+}
+
+.p4 {
+  width: 180px;
+  height: 180px;
+  bottom: 10%;
+  right: 12%;
+  background: #a68dff33;
+  animation-delay: 2.4s;
+}

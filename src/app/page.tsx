@@ -1,3 +1,5 @@
+import Reveal from "@/components/reveal";
+
 const services = [
   {
     title: "形象網站架設",
@@ -31,6 +33,13 @@ const portfolio = [
 export default function Home() {
   return (
     <main className="min-h-screen text-zinc-100">
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        <div className="particle p1" />
+        <div className="particle p2" />
+        <div className="particle p3" />
+        <div className="particle p4" />
+      </div>
+
       <section className="relative overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,#00e5ff2a_0%,transparent_40%),radial-gradient(circle_at_80%_0%,#7c5cff35_0%,transparent_35%)]" />
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-24 md:grid-cols-2 md:py-28">
@@ -79,31 +88,45 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-14">
-        <h2 className="text-2xl font-semibold">核心服務</h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
-          {services.map((s) => (
-            <article key={s.title} className="glass-card rounded-2xl p-5">
-              <p className="text-xs text-violet-300">{s.tag}</p>
-              <h3 className="mt-2 text-lg font-semibold text-cyan-200">{s.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-zinc-300">{s.desc}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+      <Reveal className="mx-auto max-w-6xl px-6 py-14" delayMs={80}>
+        <section>
+          <h2 className="text-2xl font-semibold">核心服務</h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {services.map((s, idx) => (
+              <article key={s.title} className="glass-card rounded-2xl p-5 hover:-translate-y-1 hover:border-cyan-300/40 transition-all duration-300" style={{ transitionDelay: `${idx * 70}ms` }}>
+                <p className="text-xs text-violet-300">{s.tag}</p>
+                <h3 className="mt-2 text-lg font-semibold text-cyan-200">{s.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-zinc-300">{s.desc}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      </Reveal>
 
-      <section className="mx-auto max-w-6xl px-6 pb-20">
-        <h2 className="text-2xl font-semibold">精選案例</h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
-          {portfolio.map((item) => (
-            <article key={item.name} className="glass-card rounded-2xl p-5">
-              <p className="text-xs font-medium text-violet-300">{item.category}</p>
-              <h3 className="mt-2 text-lg font-semibold">{item.name}</h3>
-              <p className="mt-2 text-sm text-zinc-300">{item.result}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+      <Reveal className="mx-auto max-w-6xl px-6 pb-12" delayMs={120}>
+        <section>
+          <h2 className="text-2xl font-semibold">精選案例</h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {portfolio.map((item, idx) => (
+              <article key={item.name} className="glass-card rounded-2xl p-5 hover:-translate-y-1 hover:border-violet-300/40 transition-all duration-300" style={{ transitionDelay: `${idx * 70}ms` }}>
+                <p className="text-xs font-medium text-violet-300">{item.category}</p>
+                <h3 className="mt-2 text-lg font-semibold">{item.name}</h3>
+                <p className="mt-2 text-sm text-zinc-300">{item.result}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      <Reveal className="mx-auto max-w-6xl px-6 pb-20" delayMs={160}>
+        <section className="neon-outline rounded-3xl bg-[#081325b8] p-8">
+          <h2 className="text-2xl font-semibold">準備把網站升級成自動營運系統？</h2>
+          <p className="mt-3 text-zinc-300">從視覺、內容、客服到名單轉換，給樂數位幫你一次到位。</p>
+          <a href="/contact" className="mt-6 inline-flex rounded-full bg-cyan-300 px-6 py-3 text-sm font-semibold text-[#051019]">
+            立即啟動專案
+          </a>
+        </section>
+      </Reveal>
     </main>
   );
 }
