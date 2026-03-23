@@ -35,18 +35,18 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,#00e5ff2a_0%,transparent_40%),radial-gradient(circle_at_80%_0%,#7c5cff35_0%,transparent_35%)]" />
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-24 md:grid-cols-2 md:py-28">
           <div className="relative z-10">
-            <p className="mb-4 inline-flex rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1 text-xs tracking-wider text-cyan-200">
+            <p className="intro-fade-up mb-4 inline-flex rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1 text-xs tracking-wider text-cyan-200">
               GATHER DIGITAL SYSTEM
             </p>
-            <h1 className="text-4xl font-semibold leading-tight sm:text-6xl">
+            <h1 className="intro-fade-up intro-delay-1 text-4xl font-semibold leading-tight sm:text-6xl">
               給樂數位
               <br />
               <span className="text-gradient">讓網站自動運轉</span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg text-zinc-300">
+            <p className="intro-fade-up intro-delay-2 mt-6 max-w-xl text-lg text-zinc-300">
               我們把網站從「展示頁」升級成「營運系統」：可接待、可收單、可持續迭代。
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="intro-fade-up intro-delay-3 mt-8 flex flex-wrap gap-3">
               <a href="/contact" className="rounded-full bg-cyan-300 px-6 py-3 text-sm font-semibold text-[#051019]">
                 預約策略諮詢
               </a>
@@ -56,7 +56,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative z-10 glass-card rounded-2xl p-5">
+          <div className="relative z-10 glass-card intro-glow rounded-2xl p-5">
             <div className="mb-4 flex items-center gap-2 text-xs text-zinc-400">
               <span className="h-2 w-2 rounded-full bg-emerald-400" /> SYSTEM ONLINE
             </div>

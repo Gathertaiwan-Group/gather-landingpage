@@ -55,3 +55,46 @@ body {
     linear-gradient(to bottom, #ffffff08 1px, transparent 1px);
   background-size: 28px 28px;
 }
+
+/* Entrance animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes soft-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 1px #66f0ff25 inset, 0 0 26px #66f0ff1f;
+  }
+  50% {
+    box-shadow: 0 0 0 1px #66f0ff45 inset, 0 0 40px #66f0ff3b;
+  }
+}
+
+.intro-fade-up {
+  opacity: 0;
+  animation: fade-up 0.7s ease-out forwards;
+}
+
+.intro-delay-1 {
+  animation-delay: 0.12s;
+}
+
+.intro-delay-2 {
+  animation-delay: 0.24s;
+}
+
+.intro-delay-3 {
+  animation-delay: 0.36s;
+}
+
+.intro-glow {
+  animation: soft-glow 2.6s ease-in-out infinite;
+}
