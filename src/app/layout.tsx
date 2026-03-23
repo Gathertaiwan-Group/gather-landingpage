@@ -18,7 +18,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <header className="sticky top-0 z-50 border-b border-white/10 bg-[#060a14cc] backdrop-blur-md">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
             <Link href="/" className="text-sm font-semibold tracking-[0.2em] text-cyan-300">
-              GELE DIGITAL
+              給樂數位
             </Link>
             <nav className="flex items-center gap-5 text-sm font-medium text-zinc-200">
               <Link href="/services" className="hover:text-cyan-300">服務</Link>
@@ -33,7 +33,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         {children}
 
         <footer className="mt-auto border-t border-white/10 bg-[#060a14] py-6 text-center text-xs text-zinc-400">
-          © {new Date().getFullYear()} 給樂數位 Gele Digital. Built for autonomous growth.
+          © {new Date().getFullYear()} 給樂數位. Built for autonomous growth.
         </footer>
       </body>
     </html>
