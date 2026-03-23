@@ -42,6 +42,10 @@ export default function Home() {
 
       <section className="relative overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,#00e5ff2a_0%,transparent_40%),radial-gradient(circle_at_80%_0%,#7c5cff35_0%,transparent_35%)]" />
+        <div className="hero-banner">
+          <div className="hero-banner-glow" />
+          <div className="hero-banner-scan" />
+        </div>
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-24 md:grid-cols-2 md:py-28">
           <div className="relative z-10">
             <p className="intro-fade-up mb-4 inline-flex rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1 text-xs tracking-wider text-cyan-200">

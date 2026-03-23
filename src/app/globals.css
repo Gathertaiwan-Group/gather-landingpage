@@ -166,3 +166,47 @@ body {
   background: #a68dff33;
   animation-delay: 2.4s;
 }
+
+@keyframes banner-shift {
+  0% { transform: translateX(-35%); }
+  100% { transform: translateX(35%); }
+}
+
+@keyframes banner-scan {
+  0% { transform: translateX(-120%); opacity: 0; }
+  20% { opacity: 0.7; }
+  50% { opacity: 1; }
+  80% { opacity: 0.7; }
+  100% { transform: translateX(120%); opacity: 0; }
+}
+
+.hero-banner {
+  position: absolute;
+  left: 50%;
+  bottom: -56px;
+  transform: translateX(-50%);
+  width: min(1000px, 92vw);
+  height: 160px;
+  pointer-events: none;
+  overflow: hidden;
+  filter: blur(0.2px);
+}
+
+.hero-banner-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #5ee9ff00 0%, #5ee9ff33 25%, #8b7bff55 50%, #5ee9ff33 75%, #5ee9ff00 100%);
+  border-top: 1px solid #7ef3ff55;
+  border-radius: 999px;
+  animation: banner-shift 6s ease-in-out infinite alternate;
+}
+
+.hero-banner-scan {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 35%;
+  background: linear-gradient(90deg, #ffffff00 0%, #9af7ff88 50%, #ffffff00 100%);
+  mix-blend-mode: screen;
+  animation: banner-scan 4.8s linear infinite;
+}
