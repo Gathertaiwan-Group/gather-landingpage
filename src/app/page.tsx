@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Reveal from "@/components/reveal";
 
 const services = [
@@ -31,6 +34,8 @@ const portfolio = [
 ];
 
 export default function Home() {
+  const [tilt, setTilt] = useState({ x: 0, y: 0 });
+
   return (
     <main className="min-h-screen text-zinc-100">
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
@@ -40,9 +45,21 @@ export default function Home() {
         <div className="particle p4" />
       </div>
 
-      <section className="relative overflow-hidden border-b border-white/10">
+      <section
+        className="relative overflow-hidden border-b border-white/10"
+        onMouseMove={(e) => {
+          const rect = e.currentTarget.getBoundingClientRect();
+          const x = ((e.clientX - rect.left) / rect.width - 0.5) * 16;
+          const y = ((e.clientY - rect.top) / rect.height - 0.5) * 12;
+          setTilt({ x, y });
+        }}
+        onMouseLeave={() => setTilt({ x: 0, y: 0 })}
+      >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,#00e5ff2a_0%,transparent_40%),radial-gradient(circle_at_80%_0%,#7c5cff35_0%,transparent_35%)]" />
-        <div className="hero-banner">
+        <div
+          className="hero-banner"
+          style={{ transform: `translateX(calc(-50% + ${tilt.x}px)) translateY(${tilt.y * 0.35}px)` }}
+        >
           <div className="hero-banner-glow" />
           <div className="hero-banner-scan" />
         </div>
