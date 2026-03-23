@@ -21,21 +21,21 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <main className="min-h-screen bg-zinc-50 px-6 py-16 text-zinc-900">
+    <main className="min-h-screen px-6 py-16 text-zinc-100">
       <div className="mx-auto max-w-5xl">
         <h1 className="text-4xl font-bold">服務方案</h1>
-        <p className="mt-3 text-zinc-600">給樂數位提供建站 + 自動化導入，讓網站成為可持續運轉的營運系統。</p>
+        <p className="mt-3 text-zinc-300">以科技感網站 + 自動化流程為核心，交付可持續迭代的商業系統。</p>
         <div className="mt-10 space-y-5">
           {services.map((s) => (
-            <section key={s.title} className="rounded-2xl border border-zinc-200 bg-white p-6">
-              <h2 className="text-2xl font-semibold">{s.title}</h2>
-              <p className="mt-2 text-sm text-zinc-600">{s.target}</p>
-              <ul className="mt-4 list-inside list-disc space-y-1 text-sm">
+            <section key={s.title} className="glass-card rounded-2xl p-6">
+              <h2 className="text-2xl font-semibold text-cyan-200">{s.title}</h2>
+              <p className="mt-2 text-sm text-zinc-300">{s.target}</p>
+              <ul className="mt-4 list-inside list-disc space-y-1 text-sm text-zinc-200">
                 {s.deliverables.map((d) => (
                   <li key={d}>{d}</li>
                 ))}
               </ul>
-              <p className="mt-4 text-sm font-medium text-sky-700">預估時程：{s.timeline}</p>
+              <p className="mt-4 text-sm font-medium text-violet-300">預估時程：{s.timeline}</p>
             </section>
           ))}
         </div>

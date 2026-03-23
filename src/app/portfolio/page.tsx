@@ -6,17 +6,17 @@ const items = [
 
 export default function PortfolioPage() {
   return (
-    <main className="min-h-screen bg-zinc-50 px-6 py-16 text-zinc-900">
+    <main className="min-h-screen px-6 py-16 text-zinc-100">
       <div className="mx-auto max-w-5xl">
         <h1 className="text-4xl font-bold">作品集</h1>
-        <p className="mt-3 text-zinc-600">以下為給樂數位可交付的網站類型與成果方向示意。</p>
+        <p className="mt-3 text-zinc-300">以商業結果導向設計，每個專案都為轉換與成長服務。</p>
 
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {items.map((item) => (
-            <article key={item.title} className="rounded-2xl border border-zinc-200 bg-white p-5">
-              <p className="text-xs font-semibold text-sky-700">{item.category}</p>
-              <h2 className="mt-2 text-xl font-semibold">{item.title}</h2>
-              <p className="mt-2 text-sm text-zinc-600">{item.summary}</p>
+            <article key={item.title} className="glass-card rounded-2xl p-5">
+              <p className="text-xs font-semibold text-violet-300">{item.category}</p>
+              <h2 className="mt-2 text-xl font-semibold text-zinc-100">{item.title}</h2>
+              <p className="mt-2 text-sm text-zinc-300">{item.summary}</p>
             </article>
           ))}
         </div>

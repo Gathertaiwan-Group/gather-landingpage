@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #05070f;
+  --foreground: #e6ecff;
+  --card: #0c1222cc;
+  --line: #1e2a45;
+  --primary: #5ee9ff;
+  --secondary: #8b7bff;
 }
 
 @theme inline {
@@ -12,15 +16,42 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
+  margin: 0;
+  background:
+    radial-gradient(circle at 20% 20%, #11204a55 0%, transparent 35%),
+    radial-gradient(circle at 80% 0%, #3f2a8a55 0%, transparent 30%),
+    linear-gradient(180deg, #04060d 0%, #05070f 40%, #060a14 100%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Inter, system-ui, sans-serif;
+}
+
+.glass-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+  box-shadow: inset 0 1px 0 #ffffff15, 0 20px 50px #00000055;
+}
+
+.neon-outline {
+  border: 1px solid #66f0ff66;
+  box-shadow: 0 0 0 1px #66f0ff20 inset, 0 0 30px #66f0ff22;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #5ee9ff 0%, #b7b3ff 50%, #5ee9ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(to right, #ffffff08 1px, transparent 1px),
+    linear-gradient(to bottom, #ffffff08 1px, transparent 1px);
+  background-size: 28px 28px;
 }
