@@ -7,7 +7,7 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "給樂數位｜自動運轉網站服務",
+  title: "給樂數位",
   description: "形象網站、一頁式團購網站、醫美診所網站架設與自動化導入。",
 };
 
