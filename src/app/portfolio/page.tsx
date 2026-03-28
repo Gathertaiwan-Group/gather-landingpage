@@ -1,15 +1,15 @@
 const items = [
-  { title: "品牌形象站 A", category: "形象網站", summary: "強化品牌故事與服務導流" },
-  { title: "團購活動頁 B", category: "一頁式團購", summary: "優化轉換路徑與下單流程" },
-  { title: "醫美官網 C", category: "醫美診所", summary: "建立信任與預約轉化機制" },
+  { title: "AI 配對引擎", category: "Matching", summary: "根據 profile、興趣、目標與活動偏好做更高品質推薦" },
+  { title: "活動主辦工作台", category: "Organizer OS", summary: "幫活動方管理上架、報名、名單與觸達流程" },
+  { title: "場地 / 資源供應鏈", category: "Venue & Resources", summary: "整合場地時段、器材服務與活動需求媒合" },
 ];
 
 export default function PortfolioPage() {
   return (
     <main className="min-h-screen px-6 py-16 text-zinc-100">
       <div className="mx-auto max-w-5xl">
-        <h1 className="text-4xl font-bold">作品集</h1>
-        <p className="mt-3 text-zinc-300">以商業結果導向設計，每個專案都為轉換與成長服務。</p>
+        <h1 className="text-4xl font-bold">平台模組</h1>
+        <p className="mt-3 text-zinc-300">這不只是交友產品，而是一套可自動化營運的媒合與活動基礎設施。</p>
 
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {items.map((item) => (
