@@ -6,7 +6,7 @@ export default function InvestorsPage() {
     },
     {
       title: "我們的解法",
-      body: "AI 月老是一個整合 AI 配對、活動主辦、場地與資源出租的社交活動平台，讓媒合不只停留在線上，而是延伸到可執行的活動與供應鏈。",
+      body: "AI 月老是一個整合 AI 配對、活動主辦、場地與資源出租的社交活動平台。每位使用者都有一個專屬 AI 月老（Personal Cupid Agent），幫忙理解需求、暖場聊天、推薦活動、安排聚會與追蹤互動。",
     },
     {
       title: "商業模式",
@@ -55,12 +55,19 @@ export default function InvestorsPage() {
           </article>
           <article className="glass-card rounded-2xl p-6">
             <h2 className="text-xl font-semibold text-cyan-200">平台飛輪</h2>
-            <p className="mt-4 text-sm text-zinc-300">更多用戶帶來更多活動需求，更多活動帶來場地與資源需求，供應增加又讓平台體驗更完整，形成增長飛輪。</p>
+            <p className="mt-4 text-sm text-zinc-300">更多用戶帶來更多活動需求，更多活動帶來場地與資源需求，供應增加又讓平台體驗更完整；而 Personal Cupid Agent 讓每位用戶越用越準，形成更強的資料與推薦護城河。</p>
           </article>
           <article className="glass-card rounded-2xl p-6">
             <h2 className="text-xl font-semibold text-cyan-200">資金用途</h2>
             <p className="mt-4 text-sm text-zinc-300">產品開發、AI agent 與自動化流程、主辦方招商、早期用戶增長、內容與品牌推廣。</p>
           </article>
+        </section>
+
+        <section className="mt-10 glass-card rounded-2xl p-6">
+          <h2 className="text-2xl font-semibold text-cyan-200">產品亮點：每人一位 AI 月老</h2>
+          <p className="mt-4 text-sm leading-7 text-zinc-300">
+            每位使用者都有一個專屬 Personal Cupid Agent，負責建立交友 profile、提供聊天暖場建議、推薦適合對象與活動、活動前後追蹤互動，讓平台從「流量媒合」升級成「關係經營系統」。
+          </p>
         </section>
 
         <section className="mt-10 glass-card rounded-2xl p-6">
