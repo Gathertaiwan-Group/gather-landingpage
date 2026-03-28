@@ -23,6 +23,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <nav className="flex items-center gap-5 text-sm font-medium text-zinc-200">
               <Link href="/services" className="hover:text-cyan-300">服務</Link>
               <Link href="/portfolio" className="hover:text-cyan-300">架構</Link>
+              <Link href="/investors" className="hover:text-cyan-300">投資人</Link>
               <Link href="/contact" className="rounded-full border border-cyan-300/40 bg-cyan-300/10 px-4 py-2 text-cyan-200">
                 聯絡我們
               </Link>
